@@ -1,5 +1,7 @@
 /**
  * Holographic material component by Anderson Mancini - Dec 2023.
+ * 
+ * This is a TSX component, ready to drop directly into your project. 
  */
 
 import React, { useRef, useMemo } from 'react';
@@ -215,7 +217,7 @@ const HolographicMaterial: React.FC<HolographicMaterialProps> = ({
 
   const ref = useRef(null);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (ref.current) {
       (ref.current as any).time += delta;
     }
